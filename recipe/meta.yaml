@@ -39,7 +39,7 @@ requirements:
     - bullet
     - imageio
     - imageio-ffmpeg
-    - vpython
+    - vpython                                # [not ppc64le]
     - numpy-stl
     - pyyaml
 
