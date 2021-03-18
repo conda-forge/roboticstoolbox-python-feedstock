@@ -11,13 +11,16 @@ source:
   sha256: efa9165125a07156097db5f6b6fc4990f7f8615d6a202c89f292a808da00aa26
 
 build:
-  number: 1
+  number: 2
   skip: true   # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
   host:
     - pip
     - python
@@ -36,7 +39,7 @@ requirements:
     - bullet
     - imageio
     - imageio-ffmpeg
-    - vpython
+    - vpython                                # [not aarch64]
     - numpy-stl
     - pyyaml
 
