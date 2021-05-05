@@ -44,6 +44,7 @@ requirements:
     - vpython                                # [not aarch64]
     - numpy-stl
     - pyyaml
+    - spatialgeometry
 
 test:
   imports:
