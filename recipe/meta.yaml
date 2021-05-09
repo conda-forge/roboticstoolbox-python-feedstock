@@ -35,8 +35,9 @@ requirements:
     - qpsolvers
     - rtb-data
     - scipy
-    - spatialmath-python >=0.9.2
-    - swift-sim >=0.8.1
+    - spatialmath-python >=0.9.6
+    - swift-sim >=0.9.5
+    - spatialgeometry >=0.1.2
     - sympy
     - bullet
     - imageio
@@ -44,7 +45,6 @@ requirements:
     - vpython                                # [not aarch64]
     - numpy-stl
     - pyyaml
-    - spatialgeometry
 
 test:
   imports:
