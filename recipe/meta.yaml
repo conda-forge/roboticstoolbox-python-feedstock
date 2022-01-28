@@ -39,13 +39,14 @@ requirements:
     - swift-sim >=0.9.5
     - spatialgeometry >=0.1.2
     - sympy
-    - bullet
+    - bullet >=3.21
     - imageio
     - imageio-ffmpeg
     - vpython                                # [not aarch64]
     - numpy-stl
     - pyyaml
     - progress
+    - cryptography
 
 test:
   imports:
