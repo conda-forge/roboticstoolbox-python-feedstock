@@ -11,7 +11,7 @@ source:
   sha256: 680a377131980ed34658a913509212280cacf9e38e0d8ce7a52ade039dad73e4
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -39,13 +39,14 @@ requirements:
     - swift-sim >=0.9.5
     - spatialgeometry >=0.1.2
     - sympy
-    - bullet
+    - bullet >=3.21
     - imageio
     - imageio-ffmpeg
     - vpython                                # [not aarch64]
     - numpy-stl
     - pyyaml
     - progress
+    - cryptography
 
 test:
   imports:
