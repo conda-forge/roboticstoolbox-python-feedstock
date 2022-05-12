@@ -1,5 +1,5 @@
 {% set name = "roboticstoolbox-python" %}
-{% set version = "0.11.0" %}
+{% set version = "1.0.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/roboticstoolbox-python-{{ version }}.tar.gz
-  sha256: 680a377131980ed34658a913509212280cacf9e38e0d8ce7a52ade039dad73e4
+  sha256: ae2c09cedcec2deff7e35757486a3e896c73d42d540044e84ebdb04897fbcecc
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
 
