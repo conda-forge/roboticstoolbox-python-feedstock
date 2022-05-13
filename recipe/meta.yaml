@@ -12,12 +12,12 @@ source:
 
 build:
   number: 0
-  skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
@@ -35,9 +35,9 @@ requirements:
     - qpsolvers
     - rtb-data
     - scipy
-    - spatialmath-python >=0.9.6
-    - swift-sim >=0.9.5
-    - spatialgeometry >=0.1.2
+    - spatialmath-python >=1.0.0
+    - swift-sim >=1.0.0
+    - spatialgeometry >=1.0.0
     - sympy
     - bullet >=3.21
     - imageio
