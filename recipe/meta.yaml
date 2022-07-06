@@ -47,6 +47,7 @@ requirements:
     - pyyaml
     - progress
     - cryptography
+    - colored
 
 test:
   imports:
