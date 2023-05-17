@@ -1,5 +1,5 @@
 {% set name = "roboticstoolbox-python" %}
-{% set version = "1.0.3" %}
+{% set version = "1.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/roboticstoolbox-python-{{ version }}.tar.gz
-  sha256: 960ef27c8608c1a3cde1ae919ca42dfe1edd5984e0ad51cae820268cc14bc772
+  sha256: 34043160297cdd047d2082925c3bb0e7d0d96eb9d0497098c3446bf58b24e587
 
 build:
   number: 0
