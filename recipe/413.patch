@@ -1,0 +1,29 @@
+From fc2fb4a58bcb08f6d439af98b75e32bf7ba2c6a9 Mon Sep 17 00:00:00 2001
+From: Felipe Cybis Pereira <felipe.cybispereira@gmail.com>
+Date: Mon, 22 Jan 2024 15:07:18 +0100
+Subject: [PATCH] fix: remove unused imports on EKF.py
+
+---
+ roboticstoolbox/mobile/EKF.py | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/roboticstoolbox/mobile/EKF.py b/roboticstoolbox/mobile/EKF.py
+index 27c7d37e..f96de498 100644
+--- a/roboticstoolbox/mobile/EKF.py
++++ b/roboticstoolbox/mobile/EKF.py
+@@ -5,14 +5,11 @@
+ """
+ from collections import namedtuple
+ import numpy as np
+-from math import pi
+-from scipy import integrate, randn
+-from scipy.linalg import sqrtm, block_diag
++from scipy.linalg import block_diag
+ from scipy.stats.distributions import chi2
+ import matplotlib.pyplot as plt
+ from matplotlib import animation
+ 
+-from spatialmath.base.animate import Animate
+ from spatialmath import base, SE2
+ from roboticstoolbox.mobile import VehicleBase
+ from roboticstoolbox.mobile.landmarkmap import LandmarkMap
