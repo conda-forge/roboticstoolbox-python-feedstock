@@ -1,5 +1,5 @@
 {% set name = "roboticstoolbox-python" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 
 package:
@@ -7,18 +7,19 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/roboticstoolbox-python-{{ version }}.tar.gz
-  sha256: 34043160297cdd047d2082925c3bb0e7d0d96eb9d0497098c3446bf58b24e587
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 2615f808784b91907927ab40e39cc2e34db89a53e71a14b40f973756122ea9e4
   patches:
     - 413.patch
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
