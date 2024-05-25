@@ -49,6 +49,7 @@ requirements:
     - progress
     - cryptography
     - colored
+    - jupyter
 
 test:
   imports:
