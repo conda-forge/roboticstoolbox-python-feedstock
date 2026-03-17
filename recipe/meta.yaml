@@ -29,6 +29,7 @@ requirements:
     - pip
     - python
     - numpy
+    - setuptools
   run:
     - ansitable
     - matplotlib-base
