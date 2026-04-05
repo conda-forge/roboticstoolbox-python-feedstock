@@ -11,9 +11,11 @@ source:
   sha256: 2615f808784b91907927ab40e39cc2e34db89a53e71a14b40f973756122ea9e4
   patches:
     - 494.patch
+    - 510.patch
+    - 511.patch
 
 build:
-  number: 3
+  number: 4
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -60,6 +62,7 @@ test:
     - roboticstoolbox.backends
   commands:
     - pip check
+    - python -c "import roboticstoolbox as rtb; robot = rtb.models.Panda()"
   requires:
     - pip
 
