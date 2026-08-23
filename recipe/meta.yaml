@@ -31,6 +31,7 @@ requirements:
     - numpy
     - scikit-build-core
     - setuptools
+    - nanobind
   run:
     - ansitable
     - matplotlib-base
