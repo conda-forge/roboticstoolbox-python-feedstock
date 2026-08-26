@@ -48,13 +48,14 @@ requirements:
     - bullet >=3.21
     - imageio
     - imageio-ffmpeg
-    - vpython                                # [not aarch64]
+    - vpython
     - numpy-stl
     - pyyaml
     - progress
     - cryptography
     - colored >2.0.0
     - jupyter
+    - xacrodoc
 
 test:
   imports:
