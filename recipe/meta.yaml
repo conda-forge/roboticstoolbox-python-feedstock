@@ -1,7 +1,6 @@
 {% set name = "roboticstoolbox-python" %}
 {% set version = "1.4.2" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -9,10 +8,6 @@ package:
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 45f0982ba8228bfd2b3423971f06fce1ba43787f5d2cd01c61a3c56e1bc950cb
-  patches:
-    - 510.patch
-    - unvendor-spatialgeometry.patch
-
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
@@ -35,6 +30,7 @@ requirements:
     - numpy
     - scikit-build-core
     - setuptools
+    - nanobind
   run:
     - ansitable
     - matplotlib-base
@@ -51,13 +47,15 @@ requirements:
     - bullet >=3.21
     - imageio
     - imageio-ffmpeg
-    - vpython                                # [not aarch64]
+    - vpython
     - numpy-stl
     - pyyaml
     - progress
     - cryptography
     - colored >2.0.0
     - jupyter
+    - xacrodoc
+    - robot_descriptions <3.0,>=2.0
 
 test:
   imports:
@@ -79,5 +77,3 @@ about:
 extra:
   recipe-maintainers:
     - Tobias-Fischer
-    - petercorke
-    - jhavl
