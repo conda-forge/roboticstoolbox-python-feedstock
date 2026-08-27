@@ -56,7 +56,7 @@ requirements:
     - colored >2.0.0
     - jupyter
     - xacrodoc
-    - robot_descriptions
+    - robot_descriptions <3.0,>=2.0
 
 test:
   imports:
