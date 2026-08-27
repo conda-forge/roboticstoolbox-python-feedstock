@@ -1,6 +1,5 @@
 {% set name = "roboticstoolbox-python" %}
-{% set version = "1.4.0" %}
-
+{% set version = "1.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b387f541eff07f5a8dbadd20f4dcdd8d4031e49a82534e821281bfc306026d65
+  sha256: 45f0982ba8228bfd2b3423971f06fce1ba43787f5d2cd01c61a3c56e1bc950cb
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
